@@ -1,0 +1,10 @@
+        public List<Author> GetAuthors()
+        {
+            return  db.Query<Author>("select * from author", commandType: System.Data.CommandType.StoredProcedure).ToList(); 
+        }
+
+        //public async Task<List<Author>> GetAuthors()
+        //{
+        //    return await db.QueryAsync<Author>("select * from author", commandType: System.Data.CommandType.StoredProcedure).ToList();
+        //}
+        //من می خوام اینطوری باشه ولی قبول نمی کنه
